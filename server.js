@@ -1,6 +1,7 @@
 // Create a Discord Bot using OpenAI API that interacts on the Discord Server
 
 import express from "express";
+import LoaderJS from "loader.js";
 // import pkg from "cors";
 // const { cors } = pkg;
 
@@ -67,6 +68,7 @@ client.on("messageCreate", async function (message) {
 
 
     const datax = `${gptResponse.data.choices[0].text}`;
+
 
     // To get the code with highlight syntax - only works if you show this in frontend
     // var code = datax;
