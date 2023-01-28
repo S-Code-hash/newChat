@@ -85,7 +85,7 @@ client.on("messageCreate", async function (message) {
                 ${message.author.username}: ${message.content}\n\
                 ChatGPT:`,
       temperature: 0.7,
-      max_tokens: 2000,
+      max_tokens: 300,
       // format: 'markdown',
       stop: ["ChatGPT", "Flexi:"],
     });
