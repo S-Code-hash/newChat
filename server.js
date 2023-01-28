@@ -78,15 +78,12 @@ client.on("messageCreate", async function (message) {
     const id2 = process.env.CHANNEL2_ID;
     if (message.channel.id !== id1 && message.channel.id !== id2) return;
     const gptResponse = await openai.createCompletion({
-      // model: "davinci",
       model: "text-davinci-003",
-      // model: "code-davinci-002",
       prompt: `ChatGPT: Hello how are you?\n\
                 ${message.author.username}: ${message.content}\n\
                 ChatGPT:`,
       temperature: 0.7,
-      max_tokens: 300,
-      // format: 'markdown',
+      max_tokens: 500,
       stop: ["ChatGPT", "Flexi:"],
     });
 
