@@ -40,30 +40,30 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-client.on('ready', () => {
-  console.log('Logged in as '+ client.user.tag)
-  client.user.setActivity('Serving '+ client.guilds.cache.size +' servers');
+// client.on('ready', () => {
+//   console.log('Logged in as '+ client.user.tag)
+//   client.user.setActivity('Serving '+ client.guilds.cache.size +' servers');
 
-  client.guilds.cache.forEach((val, inx) => {
-      console.log('Server:', val.name)
-      console.log('ServerID: ', inx)
+//   client.guilds.cache.forEach((val, inx) => {
+//       console.log('Server:', val.name)
+//       console.log('ServerID: ', inx)
 
-      console.log('# List all users out from the server')
-      val.members.cache.forEach((val, inx) => {
-          console.log('UserID: ', inx)
-          console.log('Username: ', val.user.username)
-      })
+//       console.log('# List all users out from the server')
+//       val.members.cache.forEach((val, inx) => {
+//           console.log('UserID: ', inx)
+//           console.log('Username: ', val.user.username)
+//       })
 
-      console.log('# List all channels out from the server')
-      val.channels.cache.forEach((val, inx) => {
-          console.log('ChannelID:', inx)
-          console.log('Channel Name:', val.name)
-          console.log('Channel Type:', val.type)
-      })
+//       console.log('# List all channels out from the server')
+//       val.channels.cache.forEach((val, inx) => {
+//           console.log('ChannelID:', inx)
+//           console.log('Channel Name:', val.name)
+//           console.log('Channel Type:', val.type)
+//       })
 
-      client.channels.cache.get(process.env.CHANNEL2_ID).send('@Owner the bot is online and ready to help! :)')
-  })
-})
+//       client.channels.cache.get(process.env.CHANNEL2_ID).send('@Owner the bot is online and ready to help! :)')
+//   })
+// })
 
 
 // Check for when a message has been received on discord
