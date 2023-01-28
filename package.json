@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "engines": {
-    "node": "14.x"
+    "node": "16.9.0"
   },
   "scripts": {
     "server": "node server"
