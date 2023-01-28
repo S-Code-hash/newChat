@@ -111,6 +111,6 @@ console.log("its done now");
 client.login(process.env.DISCORD_TOKEN);
 console.log("ChatGPT Bot is Online on Discord");
 
-app.listen(5000, () => {
+app.listen(8000, () => {
   console.log("server is running on port http://localhost:5000");
 });
